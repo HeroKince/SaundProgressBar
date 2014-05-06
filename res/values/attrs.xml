@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<declare-styleable name="SaundProgressBar">
+	  <attr name="progressIndicator" format="reference" />
+	  <attr name="textSize" format="dimension" />
+	  <attr name="textColor" format="reference|color" />
+	  <attr name="textStyle">
+      <flag name="normal" value="0" />
+      <flag name="bold" value="1" />
+      <flag name="italic" value="2" />
+    </attr>
+	  <attr name="textAlign">
+	    <flag name="left" value="0" />
+      <flag name="center" value="1" />
+      <flag name="right" value="2" /> 
+	  </attr>
+	  <attr name="offset" format="dimension" />
+	</declare-styleable>
+</resources>
