@@ -1,0 +1,30 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.novoda:bintray-release:0.8.0'
+    }
+}
+
+apply plugin: com.novoda.gradle.release.ReleasePlugin
+
+/**
+ * Call this method with a closure to configure publishing your module to bintray.
+ */
+def configurePublish(Closure body) {
+    project.publish {
+        userOrg = 'geekince'
+        groupId = 'com.kince.saundprogressbar'
+        publishVersion = '1.0.0'
+        desc = 'SaundProgressBar Project'
+        website = 'https://github.com/Geekince/SaundProgressBar'
+        body.delegate = delegate
+        body()
+    }
+}
+
+ext {
+    // expose method to everyone applying this gradle file
+    configurePublish = this.&configurePublish
+}
