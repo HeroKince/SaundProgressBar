@@ -8,7 +8,24 @@
 
     <com.kince.saundprogressbar.SaundProgressBar
         android:id="@+id/regularprogressbar"
-        style="@style/Widget.ProgressBar.RegularProgressBar"
+        style="@style/RegularProgressBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:paddingLeft="15dip"
+        android:paddingRight="15dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"
+        app:offset="10dip"
+        app:textColor="#17e9eb"
+        app:textSize="10sp" />
+
+    <com.kince.saundprogressbar.SaundSeekBar
+        android:id="@+id/seekbar"
+        style="@style/RegularSeekBar"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
@@ -19,6 +36,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:offset="10dip"
+        app:textColor="#17e9eb"
         app:textSize="10sp" />
 
 </android.support.constraint.ConstraintLayout>

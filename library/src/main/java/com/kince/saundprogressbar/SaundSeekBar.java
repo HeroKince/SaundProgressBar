@@ -28,6 +28,7 @@ import android.graphics.drawable.LayerDrawable;
 import android.text.TextPaint;
 import android.util.AttributeSet;
 import android.widget.ProgressBar;
+import android.widget.SeekBar;
 
 /**
  * An enhanced version of the ProgressBar which provides greater control over
@@ -39,22 +40,22 @@ import android.widget.ProgressBar;
  *
  * @author kince
  */
-public class SaundProgressBar extends ProgressBar {
+public class SaundSeekBar extends SeekBar {
 
     private Drawable mIndicator;
     private int mOffset = 5;
     private TextPaint mTextPaint;
     private Formatter mFormatter;
 
-    public SaundProgressBar(Context context) {
+    public SaundSeekBar(Context context) {
         this(context, null);
     }
 
-    public SaundProgressBar(Context context, AttributeSet attrs) {
+    public SaundSeekBar(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public SaundProgressBar(Context context, AttributeSet attrs, int defStyle) {
+    public SaundSeekBar(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
 
         // create a default progress bar indicator text paint used for drawing
@@ -120,7 +121,7 @@ public class SaundProgressBar extends ProgressBar {
      * The text formatter is used for customizing the presentation of the text
      * displayed in the progress indicator. The default text format is X% where
      * X is [0,100]. To use the formatter you must provide an object which
-     * implements the {@linkplain SaundProgressBar.Formatter} interface.
+     * implements the {@linkplain SaundSeekBar.Formatter} interface.
      *
      * @param formatter
      */
@@ -189,13 +190,13 @@ public class SaundProgressBar extends ProgressBar {
 
         // if we have an indicator we need to adjust the height of the view to
         // accomodate the indicator
-        if (mIndicator != null) {
-            final int width = getMeasuredWidth();
-            final int height = getMeasuredHeight() + getIndicatorHeight();
-
-            // make the view the original height + indicator height size
-            setMeasuredDimension(width, height);
-        }
+//        if (mIndicator != null) {
+//            final int width = getMeasuredWidth();
+//            final int height = getMeasuredHeight() + getIndicatorHeight();
+//
+//            // make the view the original height + indicator height size
+//            setMeasuredDimension(width, height);
+//        }
     }
 
     private int getIndicatorWidth() {
@@ -286,7 +287,7 @@ public class SaundProgressBar extends ProgressBar {
             }
 
             // adjust for any additional offset
-            dx = dx - getIndicatorWidth() / 2 - mOffset + getPaddingLeft();
+            dx = dx + getThumbOffset() / 4;
 
             // translate the canvas to the position where we should draw the
             // indicator

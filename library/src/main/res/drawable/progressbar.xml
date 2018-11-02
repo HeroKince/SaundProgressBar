@@ -5,7 +5,7 @@
 
     <item
         android:id="@+id/progress"
-        android:drawable="@drawable/progressbar_bar"></item>
+        android:drawable="@drawable/progressbar_bar"/>
 
     <item android:id="@+id/pattern">
         <bitmap

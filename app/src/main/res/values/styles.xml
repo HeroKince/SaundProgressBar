@@ -8,4 +8,21 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="RegularProgressBar">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/layer_list_progressbar</item>
+        <item name="android:indeterminateDrawable">
+            @android:drawable/progress_indeterminate_horizontal
+        </item>
+        <item name="android:minHeight">3dip</item>
+        <item name="android:maxHeight">5dip</item>
+    </style>
+
+    <style name="RegularSeekBar">
+        <item name="android:progressDrawable">@drawable/po_seekbar</item>
+        <item name="android:minHeight">3dip</item>
+        <item name="android:maxHeight">3dip</item>
+        <item name="android:thumb">@drawable/seekbar_thumb</item>
+    </style>
+
 </resources>
