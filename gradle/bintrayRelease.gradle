@@ -16,7 +16,7 @@ def configurePublish(Closure body) {
     project.publish {
         userOrg = 'geekince'
         groupId = 'com.kince.saundprogressbar'
-        publishVersion = '1.0.0'
+        publishVersion = '1.0.1'
         desc = 'SaundProgressBar Project'
         website = 'https://github.com/Geekince/SaundProgressBar'
         body.delegate = delegate
